@@ -41,7 +41,7 @@ class HUD{
             $name = $p->getName();
             if(isset($displayTo[$name])){
                 if($plugins['PurePerms']){
-                    if(((float)$plugins['PurePerms']->getDescription()->getVersion()) < 1.2)
+                    if(((float)$plugins['PurePerms']->getDescription()->getVersion()) < 1.4.1-2)
                         $pp_group = $plugins['PurePerms']->getUser($p)->getGroup()->getName();
                     else
                         $pp_group = $plugins['PurePerms']->getUserDataMgr()->getData($p)['group'];
@@ -55,7 +55,7 @@ class HUD{
                 $format = $data['format'];
 
                 if($plugins['FactionsPro']){
-                    if(((float)$plugins['FactionsPro']->getDescription()->getVersion()) < 1.5)
+                    if(((float)$plugins['FactionsPro']->getDescription()->getVersion()) < 1.3.11-6)
                         $faction = $plugins['FactionsPro']->getPlayerFaction($name);
                     else
                         $faction = $plugins['FactionsPro']->getSessionFromName($name)->getFactionName();
